@@ -44,12 +44,11 @@ class CheckoutController extends Controller
             for ($i = 0; $i < $length; $i++) {
                 $random .= rand(0, 1) ? rand(0, 9) : chr(rand(ord('a'), ord('z')));
             }
-            $no_invoice = 'INV-' . Str::upper($random); //no invoice
+            $no_invoice = 'INV-' . Str::upper($random);
 
             $invoice = Invoice::create([
                 'invoice'       =>  $no_invoice,
                 'customer_id'   =>  auth()->guard('api')->user()->id,
-                'unit'          =>  $this->request->unit,
                 'name'          =>  $this->request->name,
                 'phone'         =>  $this->request->phone,
                 'province'      =>  $this->request->province,
@@ -180,7 +179,6 @@ class CheckoutController extends Controller
                 'status' => 'expired'
             ]);
         } elseif ($transactionStatus == 'cancel') {
-            // update invoice to failed
             $data_transaction->update([
                 'status' => 'failed'
             ]);
