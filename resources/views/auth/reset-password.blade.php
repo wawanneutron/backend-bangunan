@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class=" col-md-6 col-lg-4">
                 <div class="img-logo text-center mt-5">
-                    <img src="{{ asset('assets/img/company.png') }}" style=" width: 80px;">
+                    <img src="{{ asset('assets/img/chackra.jpg') }}" style=" width: 80px;">
                 </div>
                 <div class="card border-0 shadow-lg mb-3 mt-5">
                     <div class="card-body p-4">

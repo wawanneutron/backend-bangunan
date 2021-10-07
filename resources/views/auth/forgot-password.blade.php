@@ -7,12 +7,12 @@
         <div class="container-fluid">
             <div class="ml-auto mr-auto mr-sm-auto mr-lg-0 mr-md-auto">
                 <a class="navbar-brand page-scroll" href="#">
-                    <img src="{{ url('assets/img/logo_toko.svg') }}" alt="" />
+                    <img src="{{ url('assets/img/chackra.jpg') }}" width="60" alt="" />
                 </a>
             </div>
             <ul class="navbar-nav mr-auto d-none d-sm-block d-lg-block">
                 <li>
-                    <span class="text-muted"> | &nbsp; Easy manage data orders</span>
+                    <span class="text-muted"> | &nbsp; PT. CHAKRA GAHANA GEMILANG</span>
                 </li>
             </ul>
         </div>
@@ -20,9 +20,6 @@
     <div class="container">
         <div class="row forgot-pass justify-content-center">
             <div class=" col-md-6 col-lg-4">
-                <div class="img-logo text-center mt-5">
-                    <img src="{{ asset('assets/img/logo_toko.svg') }}" class=" w-25">
-                </div>
                 <div class="card border-0 shadow-lg mb-3 mt-5">
                     <div class="card-body p-4">
                         @if (session('status'))
