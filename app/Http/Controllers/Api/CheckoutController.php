@@ -66,6 +66,7 @@ class CheckoutController extends Controller
                     'invoice'       =>  $no_invoice,
                     'product_id'    =>  $cart->product_id,
                     'product_name'  =>  $cart->product->title,
+                    'unit'          =>  $cart->product->unit,
                     'qty'           =>  $cart->quantity,
                     'price'         =>  $cart->price,
                 ]);

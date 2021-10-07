@@ -68,7 +68,7 @@ class ProductController extends Controller
             )
             ->groupBy('products.id')
             ->inRandomOrder()
-            ->take(8)
+            ->take(4)
             ->get();
 
         return response()->json([

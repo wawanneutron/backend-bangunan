@@ -54,7 +54,7 @@ class CategoryController extends Controller
 
     public function categoryHome()
     {
-        $categories = Category::latest()->take(6)->get();
+        $categories = Category::latest()->take(8)->get();
         return response()->json([
             'status'        =>  true,
             'message'       =>  'List Data Category Home',
