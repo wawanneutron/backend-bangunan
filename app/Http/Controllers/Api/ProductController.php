@@ -67,7 +67,7 @@ class ProductController extends Controller
                 DB::raw('count(reviews.review) as total_reviews'),
             )
             ->groupBy('products.id')
-            ->inRandomOrder()
+            ->orderBy('created_at', 'desc')
             ->take(4)
             ->get();
 
