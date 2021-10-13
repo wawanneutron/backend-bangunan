@@ -103,8 +103,8 @@ class CheckoutController extends Controller
 
             /* kirim notifikasi email (detail pembayaran) ke customer */
             // data transaction
-            $data_transaction   = Invoice::with(['customer', 'orders'])->where('invoice', $invoice->invoice)->first();
-            Mail::to($data_transaction->customer->email)->send(new NotificationCheckout($data_transaction));
+            // $data_transaction   = Invoice::with(['customer', 'orders'])->where('invoice', $invoice->invoice)->first();
+            // Mail::to($data_transaction->customer->email)->send(new NotificationCheckout($data_transaction));
         });
         return response()->json([
             'success' => true,
@@ -162,7 +162,7 @@ class CheckoutController extends Controller
             $data_transaction->update([
                 'status' => 'payment-success'
             ]);
-            Mail::to($data_transaction->customer->email)->send(new NotificationCheckoutSuccess($data_transaction));
+            // Mail::to($data_transaction->customer->email)->send(new NotificationCheckoutSuccess($data_transaction));
         } elseif ($transactionStatus == 'pending') {
             // update invoice to pending
             $data_transaction->update([
