@@ -29,7 +29,7 @@ class ProductController extends Controller
         // dd($products);
 
         if (request()->ajax()) {
-            $products = Product::with(['category', 'image_product']);
+            $products = Product::with(['category', 'image_product'])->latest();
             return DataTables::eloquent($products)
                 ->addColumn('action', function ($item) {
                     return '

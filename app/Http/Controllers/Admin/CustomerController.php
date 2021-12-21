@@ -18,7 +18,7 @@ class CustomerController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $customers = Customer::all();
+            $customers = Customer::latest();
             return DataTables::of($customers)
                 ->editColumn('at', function ($item) {
                     return dateID($item->created_at);

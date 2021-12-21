@@ -23,7 +23,7 @@ class OrderController extends Controller
 
         // tampilkan dengan DataTables
         if (request()->ajax()) {
-            $invoices = Invoice::all();
+            $invoices = Invoice::latest();
             return DataTables::of($invoices)
                 ->addColumn('action', function ($data) {
                     return '

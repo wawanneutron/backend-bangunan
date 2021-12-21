@@ -30,7 +30,7 @@ class GalleryController extends Controller
         //     ->paginate(10);
 
         if (request()->ajax()) {
-            $gallery = ProductGallery::with(['product']);
+            $gallery = ProductGallery::with(['product'])->latest();
             return DataTables::eloquent($gallery)
                 ->addColumn('action', function ($item) {
                     return '
