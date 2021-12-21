@@ -10,7 +10,7 @@
         <div class="sidebar-brand-text" style=" font-size: 13px;">ADMIN DASHBOARD</div>
     </a>
     <div class="sidebar-heading mb-5">
-        PT. Chakra Gahana Gemilang
+        PT Chakra Gahana Gemilang
     </div>
     <!-- Divider -->
     <hr class="sidebar-divider ">

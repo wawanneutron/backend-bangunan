@@ -11,7 +11,7 @@
             </div>
             <ul class="navbar-nav mr-auto d-none d-sm-block d-lg-block">
                 <li>
-                    <span class="text-muted"> | &nbsp; PT. CHAKRA GAHANA GEMILANG</span>
+                    <span class="text-muted"> | &nbsp; PT CHAKRA GAHANA GEMILANG</span>
                 </li>
             </ul>
         </div>
