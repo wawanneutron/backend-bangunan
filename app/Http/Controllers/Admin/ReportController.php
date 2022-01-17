@@ -16,7 +16,7 @@ class ReportController extends Controller
     {
         $data_product = Product::all();
         $pdf = PDF::loadView('admin.laporan.laporan-product', ['data' => $data_product]);
-        return $pdf->download('data-product.pdf');
+        return $pdf->stream('data-product.pdf');
     }
 
     public function cetak_pdf_orders()
@@ -24,7 +24,7 @@ class ReportController extends Controller
         $data_orders = Invoice::where('status', 'success')->get();
         $total = Invoice::where('status', 'success')->sum('grand_total');
         $pdf = PDF::loadView('admin.laporan.laporan-orders', ['data' => $data_orders, 'grandTotal' => $total]);
-        return $pdf->download('data-orders.pdf');
+        return $pdf->stream('data-orders.pdf');
     }
 
     public function cetak_detail_order($id)
@@ -38,7 +38,7 @@ class ReportController extends Controller
     {
         $customers = Customer::all();
         $pdf = PDF::loadView('admin.laporan.laporan-data-customers', ['data' => $customers]);
-        return $pdf->download('data-customers.pdf');
+        return $pdf->stream('data-customers.pdf');
     }
 }
 

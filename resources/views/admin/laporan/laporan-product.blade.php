@@ -37,10 +37,10 @@
         </table>
         <div class="footer mt-5 text-right">
             <div class="text-header">Mengetahui</div>
-            <br> <br> <br>
-            <div class="text-header ">Manager Toko</div>
+                <img src="{{ public_path('/assets/img/ttd.png') }}" width="90" alt="">
+            <div class="text-header ">Admin</div>
             <span style=" font-size: 12px;">dicetak tanggal
-                {{ dateID(Carbon\Carbon::now()->toDateTimeString()) }}</span>
+                {{ Carbon\Carbon::now()->format('d, F Y - H:i:s') }}</span>
         </div>
     </div>
 </body>

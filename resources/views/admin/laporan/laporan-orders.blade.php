@@ -48,11 +48,11 @@
         <div class=" text-right"><i>*total semua pendapatan adalah</i> {{ moneyFormat($grandTotal) }}</div>
         <div class="footer-report mt-5 text-right">
             <div class="text-header">Mengetahui</div>
-            <br> <br> <br>
+                <img src="{{ public_path('/assets/img/ttd.png') }}" width="90" alt="">
             <div class="sub">
-                <div class="text-header ">Manager Toko</div>
+                <div class="text-header ">Admin</div>
                 <span style=" font-size: 12px;">dicetak tanggal
-                    {{ dateID(Carbon\Carbon::now()->toDateTimeString()) }}</span>
+                    {{ Carbon\Carbon::now()->format('d, F Y - H:i:s') }}</span>
             </div>
         </div>
     </div>
